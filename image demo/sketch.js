@@ -20,5 +20,5 @@ function draw() {
   background(220);
   rect(mouseX, mouseY, 75, 75);
   // fill("red");
-  image(mario, mouseX, mouseY)
+  image(mario, mouseX, mouseY);
 }
