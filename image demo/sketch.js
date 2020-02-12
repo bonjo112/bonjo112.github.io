@@ -6,10 +6,10 @@
 // - describe what you did to take this project "above and beyond"
 
 
-let gear;
+let mario;
 
 function preload() {
-  gear = loadImage("assests/gear.png")
+  mario = loadImage("assests/super-mario-illustration-ong-clip-art.png")
 }
 
 function setup() {
@@ -20,5 +20,5 @@ function draw() {
   background(220);
   rect(mouseX, mouseY, 75, 75);
   // fill("red");
-  image(gear, mouseX, mouseY)
+  image(mario, mouseX, mouseY)
 }
