@@ -7,19 +7,10 @@
 
 
 
-let mario;
-
-function preload() {
-  mario = loadImage("assets/);
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
   background(220);
-  fill("red");
-  // rect(mouseX, mouseY, 75, 75);
-  image(fish, mouseX, mouseY);
 }
