@@ -4,34 +4,41 @@
 //
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
-let Tut;
+let Tutorial;
 let a;
 let b;
 let c;
 let d;
 let e;
+let Solution;
+let rand = Math.random();
 let possibleSolutions;
 
 function setup() {
   createCanvas(windowHeight , windowHeight);
   background(220);
-}
-
-
-function draw() {
-  definingSolutions();
-  displayCircleGrid();
-}
-
-function definingSolutions() {
-  let Tut = [1,1,1,1,1,1,1,1,1];
+  let Tutorial = [1,1,1,1,1,1,1,1,1];
   let a = [1,1,0,1,2,1,1,1,1];
   let b = [1,2,1,2,1,1,1,2,1];
   let c = [3,1,1,1,2,1,1,1,1];
   let d = [2,3,1,0,3,1,2,2,0];
   let e = [2,0,1,2,4,3,1,1,0];
-  let possibleSolutions = [Tut,a,b,c,d,e];
+  let possibleSolutions = [Tutorial,a,b,c,d,e];
 }
+
+function draw() {
+  displayCircleGrid();
+  pickAnOption();
+}
+
+function pickAnOption() {
+if (Tutorial === "done"){
+  Solution = possibleSolutions[rand];
+}
+else{ Solution = Tutorial;
+}
+}
+
 
 function displayCircleGrid() {
   textAlign(CENTER, CENTER);
