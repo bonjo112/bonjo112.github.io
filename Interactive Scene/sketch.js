@@ -11,7 +11,7 @@ let c;
 let d;
 let e;
 let Solution;
-let rand = Math.random();
+let rand;
 let possibleSolutions;
 
 function setup() {
@@ -32,11 +32,12 @@ function draw() {
 }
 
 function pickAnOption() {
-if (Tutorial === "done"){
-  Solution = possibleSolutions[rand];
-}
-else{ Solution = Tutorial;
-}
+  if (Tutorial === "done"){
+    Solution = possibleSolutions[Math.random(possibleSolutions)];
+  }
+  else {
+    Solution = Tutorial;
+  }
 }
 
 
@@ -46,7 +47,7 @@ function displayCircleGrid() {
   //1
   fill("red");
   ellipse(width / 2 , height / 2 , 50, 50);
-  fill("black");
+  fill("white");
   text("1", width/2, height/2);
   //2 
   fill("red");
