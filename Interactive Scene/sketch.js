@@ -23,15 +23,15 @@ function setup() {
   let c = [3,1,1,1,2,1,1,1,1];
   let d = [2,3,1,0,3,1,2,2,0];
   let e = [2,0,1,2,4,3,1,1,0];
-  let possibleSolutions = [Tutorial,a,b,c,d,e];
+  let possibleSolutions = [Tutorial,a,b,c,d,e]; 
 }
 
 function draw() {
+  pickASolution();
   displayCircleGrid();
-  pickAnOption();
 }
 
-function pickAnOption() {
+function pickASolution() {
   if (Tutorial === "done"){
     Solution = possibleSolutions[Math.random(possibleSolutions)];
   }
@@ -40,7 +40,6 @@ function pickAnOption() {
   }
 }
 
-
 function displayCircleGrid() {
   textAlign(CENTER, CENTER);
   textSize(32);
@@ -48,35 +47,229 @@ function displayCircleGrid() {
   fill("red");
   ellipse(width / 2 , height / 2 , 50, 50);
   fill("white");
-  text("1", width/2, height/2);
+  if (Solution === Tutorial){
+    text("1", width/2, height/2);
+  }
+  else if (Solution === a){
+    text("1", width/2, height/2);
+  }
+  else if (Solution === b){
+      text("1", width/2, height/2);
+  }
+  else if (Solution === c){
+    text("3", width/2, height/2);
+  }
+  else if (Solution === d) {
+    text("2", width/2, height/2);
+  }
+  else if (Solution === e){
+    text("2", width/2, height/2);
+  }
+  else {
+    text("1", width/2, height/2);
+  }
+  
   //2 
   fill("red");
   ellipse(width / 2 + 100 , height / 2  , 50,50 );
-  fill("black");
-  text("2", width/2 + 100 , height/2);
+  fill("white");
+  if (Solution === Tutorial){
+    text("1", width/2 + 100, height/2);
+  }
+  else if (Solution === a){
+    text("1", width/2 + 100, height/2);
+  }
+  else if (Solution === b){
+      text("2", width/2 + 100 , height/2);
+  }
+  else if (Solution === c){
+    text("1", width/2 + 100, height/2);
+  }
+  else if (Solution === d) {
+    text("3", width/2 + 100, height/2);
+  }
+  else if (Solution === e){
+    text("0", width/2 + 100, height/2);
+  }
+  else {
+    text("2", width/2 + 100, height/2);
+  }
+  
   //3
   fill("red");
   ellipse(width / 2 + 200 , height / 2  , 50, 50);
+  fill("white");
+  if (Solution === Tutorial){
+    text("1", width / 2 + 200 , height / 2 );
+  }
+  else if (Solution === a){
+    text("0", width/2 + 200, height/2);
+  }
+  else if (Solution === b){
+      text("1", width/2 + 200, height/2);
+  }
+  else if (Solution === c){
+    text("1", width/2 + 200, height/2);
+  }
+  else if (Solution === d) {
+    text("1", width/2 + 200, height/2);
+  }
+  else if (Solution === e){
+    text("1", width/2 + 200, height/2);
+  }
+  else {
+    text("3", width/2 + 200, height/2);
+  }
+
   //4
   fill("red");
   ellipse(width / 2, height / 2 - 65, 50, 50);
-  fill("black");
-  text("4", width/2, height/2 - 65);
+  fill("white");
+  if (Solution === Tutorial){
+    text("1",width / 2, height / 2 - 65);
+  }
+  else if (Solution === a){
+    text("1", width/2, height/2 - 65);
+  }
+  else if (Solution === b){
+      text("2", width/2, height/2 - 65);
+  }
+  else if (Solution === c){
+    text("1", width/2, height/2 -65);
+  }
+  else if (Solution === d) {
+    text("0", width/2, height/2) - 65;
+  }
+  else if (Solution === e){
+    text("2", width/2, height/2 - 65);
+  }
+  else {
+    text("4",width / 2, height / 2 - 65);
+  }
   //5
   fill("red");
   ellipse(width / 2 + 100, height / 2 - 65, 50, 50);
+  fill("white");
+  if (Solution === Tutorial){
+    text("1",width / 2 + 100, height / 2 - 65);
+  }
+  else if (Solution === a){
+    text("2", width/2 + 100, height/2 - 65);
+  }
+  else if (Solution === b){
+      text("1", width/2 + 100, height/2 - 65);
+  }
+  else if (Solution === c){
+    text("2", width/2 + 100, height/2 -65);
+  }
+  else if (Solution === d) {
+    text("3", width/2 + 100, height/2) - 65;
+  }
+  else if (Solution === e){
+    text("4", width/2 + 100, height/2 - 65);
+  }
+  else {
+    text("5",width / 2 + 100, height / 2 - 65 );
+  }
   //6
   fill("red");
   ellipse(width / 2 + 200, height / 2 - 65, 50, 50); 
+  fill("white");
+  if (Solution === Tutorial){
+    text("1",width / 2 + 200, height / 2 - 65);
+  }
+  else if (Solution === a){
+    text("1", width/2 + 200, height/2 - 65);
+  }
+  else if (Solution === b){
+      text("1", width/2 + 200, height/2 - 65);
+  }
+  else if (Solution === c){
+    text("1", width/2 + 200, height/2 -65);
+  }
+  else if (Solution === d) {
+    text("1", width/2 + 200, height/2) - 65;
+  }
+  else if (Solution === e){
+    text("3", width/2 + 200, height/2 - 65);
+  }
+  else {
+    text("6",width / 2 + 200, height / 2 - 65 );
+  }
   //7
   fill("red");
   ellipse(width / 2, height / 2 - 130, 50, 50);
-  fill("black");
-  text("7", width/2, height/2 - 130);
+  fill("white");
+  if (Solution === Tutorial){
+    text("1",width / 2, height / 2 - 130);
+  }
+  else if (Solution === a){
+    text("1", width/2 , height/2 - 65);
+  }
+  else if (Solution === b){
+      text("1", width/2 , height/2 - 65);
+  }
+  else if (Solution === c){
+    text("1", width/2 , height/2 -65);
+  }
+  else if (Solution === d) {
+    text("2", width/2 , height/2) - 65;
+  }
+  else if (Solution === e){
+    text("1", width/2 , height/2 - 65);
+  }
+  else {
+    text("7",width / 2, height / 2 - 130);
+  }
   //8
   fill("red");
   ellipse(width / 2 + 100, height / 2 - 130, 50, 50);
+  fill("white");
+  if (Solution === Tutorial){
+    text("1", width / 2 + 100, height / 2 - 130);
+  }
+  else if (Solution === a){
+    text("1", width/2 + 100, height/2 - 130);
+  }
+  else if (Solution === b){
+      text("2", width/2 + 100, height/2 - 130);
+  }
+  else if (Solution === c){
+    text("1", width/2 + 100, height/2 - 130);
+  }
+  else if (Solution === d) {
+    text("2", width/2 + 100, height/2 - 130);
+  }
+  else if (Solution === e){
+    text("1", width/2 + 100, height/2 - 130);
+  }
+  else {
+    text("8", width / 2 + 100, height / 2 - 130);
+  }
+
   //9 
   fill("red");
   ellipse(width / 2 + 200, height / 2 - 130, 50, 50); 
+  fill("white");
+  if (Solution === Tutorial){
+    text("1",width / 2 + 200, height / 2 - 130);
+  }
+  else if (Solution === a){
+    text("1", width/2 + 200, height/2 - 130);
+  }
+  else if (Solution === b){
+      text("1", width/2 + 200, height/2 - 130);
+  }
+  else if (Solution === c){
+    text("1", width/2 + 200, height/2 - 130);
+  }
+  else if (Solution === d) {
+    text("0", width/2 + 200, height/2) - 130;
+  }
+  else if (Solution === e){
+    text("0", width/2 + 200, height/2 - 130);
+  }
+  else {
+    text("9",width / 2 + 200, height / 2 - 130 );
+  }
 }
