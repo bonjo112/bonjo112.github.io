@@ -54,7 +54,7 @@ function displayCircleGrid() {
     text("1", width/2, height/2);
   }
   else if (Solution === b){
-      text("1", width/2, height/2);
+    text("1", width/2, height/2);
   }
   else if (Solution === c){
     text("3", width/2, height/2);
@@ -80,7 +80,7 @@ function displayCircleGrid() {
     text("1", width/2 + 100, height/2);
   }
   else if (Solution === b){
-      text("2", width/2 + 100 , height/2);
+    text("2", width/2 + 100 , height/2);
   }
   else if (Solution === c){
     text("1", width/2 + 100, height/2);
@@ -106,7 +106,7 @@ function displayCircleGrid() {
     text("0", width/2 + 200, height/2);
   }
   else if (Solution === b){
-      text("1", width/2 + 200, height/2);
+    text("1", width/2 + 200, height/2);
   }
   else if (Solution === c){
     text("1", width/2 + 200, height/2);
@@ -132,7 +132,7 @@ function displayCircleGrid() {
     text("1", width/2, height/2 - 65);
   }
   else if (Solution === b){
-      text("2", width/2, height/2 - 65);
+    text("2", width/2, height/2 - 65);
   }
   else if (Solution === c){
     text("1", width/2, height/2 -65);
@@ -157,7 +157,7 @@ function displayCircleGrid() {
     text("2", width/2 + 100, height/2 - 65);
   }
   else if (Solution === b){
-      text("1", width/2 + 100, height/2 - 65);
+    text("1", width/2 + 100, height/2 - 65);
   }
   else if (Solution === c){
     text("2", width/2 + 100, height/2 -65);
@@ -182,7 +182,7 @@ function displayCircleGrid() {
     text("1", width/2 + 200, height/2 - 65);
   }
   else if (Solution === b){
-      text("1", width/2 + 200, height/2 - 65);
+    text("1", width/2 + 200, height/2 - 65);
   }
   else if (Solution === c){
     text("1", width/2 + 200, height/2 -65);
@@ -207,7 +207,7 @@ function displayCircleGrid() {
     text("1", width/2 , height/2 - 65);
   }
   else if (Solution === b){
-      text("1", width/2 , height/2 - 65);
+    text("1", width/2 , height/2 - 65);
   }
   else if (Solution === c){
     text("1", width/2 , height/2 -65);
@@ -232,7 +232,7 @@ function displayCircleGrid() {
     text("1", width/2 + 100, height/2 - 130);
   }
   else if (Solution === b){
-      text("2", width/2 + 100, height/2 - 130);
+    text("2", width/2 + 100, height/2 - 130);
   }
   else if (Solution === c){
     text("1", width/2 + 100, height/2 - 130);
@@ -258,7 +258,7 @@ function displayCircleGrid() {
     text("1", width/2 + 200, height/2 - 130);
   }
   else if (Solution === b){
-      text("1", width/2 + 200, height/2 - 130);
+    text("1", width/2 + 200, height/2 - 130);
   }
   else if (Solution === c){
     text("1", width/2 + 200, height/2 - 130);
