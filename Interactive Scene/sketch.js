@@ -13,6 +13,8 @@ let e;
 let Solution;
 let possibleSolutions;
 let xClicked, yClicked;
+let xClicked2, yClicked2;
+
 let v0;
 let v1;
 
@@ -29,19 +31,42 @@ function setup() {
   let possibleSolutions = [Tutorial,a,b,c,d,e]; 
 }
 
+
 function draw() {
   pickASolution();
   displayCircleGrid();
   giveBasePointsOfArrows();
-  drawArrowsOnClick(v0, v1, "black");
+  drawArrowsOnClick("black");
 }
 
+
+  
 function giveBasePointsOfArrows() {
   if (mouseIsPressed) {
     xClicked = mouseX;
     yClicked = mouseY;
+    //beginDrawing();
+    
+
   }
 }
+//Change base and vac
+function drawArrowsOnClick(myColor) {
+  let v0 = createVector(xClicked,yClicked);
+  let v1 = createVector(mouseX, mouseY);
+  let arrowSize = 7;
+  push();
+  stroke(myColor);
+  strokeWeight(3);
+  fill(myColor);
+  translate(v0.x, v0.y);
+  line(v1.x, v1.y , 0, 0);
+  rotate(v1.heading());
+  translate(v1.mag() - arrowSize, 0);
+  triangle(0, arrowSize / 2, 0, - arrowSize / 2, arrowSize, 0);
+  pop();
+}
+
 
 function pickASolution() {
   if (Tutorial === "done"){
@@ -87,7 +112,7 @@ function displayCircleGrid() {
   ellipse(width / 2 + 100 , height / 2  , 50, 50 );
   fill("white");
   if (Solution === Tutorial){
-    text("1", width/2 + 100, height/2,);
+    text("1", width/2 + 100, height/2);
   }
   else if (Solution === a){
     text("1", width/2 + 100, height/2);
@@ -285,22 +310,5 @@ function displayCircleGrid() {
   else {
     text("9",width / 2 + 200, height / 2 - 130 );
   }
-}
-
-//Change base and vac
-function drawArrowsOnClick(myColor) {
-  let v0 = createVector(xClicked,yClicked);
-  let v1 = createVector(mouseX, mouseY);
-  push();
-  stroke(myColor);
-  strokeWeight(3);
-  fill(myColor);
-  translate(xClicked, yClicked);
-  line(0, 0, vec.x, vec.y);
-  rotate(vec.heading());
-  let arrowSize = 7;
-  translate(vec.mag() - arrowSize, 0);
-  triangle(0, arrowSize / 2, 0, -arrowSize / 2, arrowSize, 0);
-  pop();
 }
 
