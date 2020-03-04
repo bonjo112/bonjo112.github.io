@@ -14,7 +14,7 @@ let Solution;
 let possibleSolutions;
 let xClicked, yClicked;
 let xClicked2, yClicked2;
-
+let arrowPressed;
 let v0;
 let v1;
 
@@ -35,38 +35,34 @@ function setup() {
 function draw() {
   pickASolution();
   displayCircleGrid();
-  giveBasePointsOfArrows();
   drawArrowsOnClick("black");
 }
 
 
-  
-function giveBasePointsOfArrows() {
-  if (mouseIsPressed) {
-    xClicked = mouseX;
-    yClicked = mouseY;
-    //beginDrawing();
-    
 
-  }
-}
 //Change base and vac
 function drawArrowsOnClick(myColor) {
-  let v0 = createVector(xClicked,yClicked);
-  let v1 = createVector(mouseX, mouseY);
-  let arrowSize = 7;
-  push();
-  stroke(myColor);
-  strokeWeight(3);
-  fill(myColor);
-  translate(v0.x, v0.y);
-  line(v1.x, v1.y , 0, 0);
-  rotate(v1.heading());
-  translate(v1.mag() - arrowSize, 0);
-  triangle(0, arrowSize / 2, 0, - arrowSize / 2, arrowSize, 0);
-  pop();
-}
 
+  //if (keyIsPressed && key === space{
+
+  if (mouseIsPressed){
+    let v0  = createVector(xClicked,yClicked);
+    let v1 = createVector(mouseX, mouseY);
+    let arrowSize = 7;
+    push();
+    stroke(myColor);
+    strokeWeight(3);
+    fill(myColor);
+    translate(v0.x, v0.y);
+    line(v1.x, v1.y , 400 , 400);
+    rotate(v1.heading());
+    translate(v1.mag() - arrowSize, 0);
+    triangle(0, arrowSize / 2, 0, - arrowSize / 2, arrowSize, 0);
+    if(mouseIsPressed){
+      let v1 = (mouseX, mouseY);
+    }
+  }
+}
 
 function pickASolution() {
   if (Tutorial === "done"){
@@ -302,7 +298,7 @@ function displayCircleGrid() {
     text("1", width/2 + 200, height/2 - 130);
   }
   else if (Solution === d) {
-    text("0", width/2 + 200, height/2) - 130;
+    text("0", width/2 + 200, height/2 - 130);
   }
   else if (Solution === e){
     text("0", width/2 + 200, height/2 - 130);
@@ -311,4 +307,3 @@ function displayCircleGrid() {
     text("9",width / 2 + 200, height / 2 - 130 );
   }
 }
-
