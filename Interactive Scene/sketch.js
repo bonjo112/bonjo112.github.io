@@ -23,6 +23,7 @@ let base;
 function setup() {
   createCanvas(windowHeight , windowHeight);
   background(220);
+  //defining solutions
   let Tutorial = [1,1,1,1,1,1,1,1,1];
   let a = [1,1,0,1,2,1,1,1,1];
   let b = [1,2,1,2,1,1,1,2,1];
@@ -30,24 +31,33 @@ function setup() {
   let d = [2,3,1,0,3,1,2,2,0];
   let e = [2,0,1,2,4,3,1,1,0];
   let possibleSolutions = [Tutorial,a,b,c,d,e]; 
+  displayCircleGrid();
 }
 
 
 function draw() {
   pickASolution();
-  displayCircleGrid();
+  
+  selectBaseWithSpace();
   drawArrowsOnClick("black");
+  //checkArrowsEndPosition();
+  //isPuzzleDone();
 }
 
 
 
-//Change base and vac
-function drawArrowsOnClick(myColor) {
+//Change base 
+function selectBaseWithSpace() {
   if (keyIsPressed && keyCode === 32){
     base = {
       x: mouseX,
       y: mouseY
     };
+  }
+}
+
+//draw arrow
+function drawArrowsOnClick(myColor){
   if(mouseIsPressed){
     let v0  = createVector(xClicked,yClicked);
     let v1 = createVector(mouseX, mouseY);
@@ -56,15 +66,14 @@ function drawArrowsOnClick(myColor) {
     stroke(myColor);
     strokeWeight(3);
     fill(myColor);
-    translate(v0.x, v0.y);
-    line(v1.x, v1.y , base.x, base.y);
+    // translate(v0.x, v0.y);
+    line(v1.x, v1.y , Number(base.x), Number(base.y));
     rotate(v1.heading());
     translate(v1.mag() - arrowSize, 0);
     triangle(0, arrowSize / 2, 0, - arrowSize / 2, arrowSize, 0);
     v1 = (mouseX, mouseY);
   }
-  }
-  }
+}
 
 
 function pickASolution() {
@@ -75,7 +84,16 @@ function pickASolution() {
     Solution = Tutorial;
   }
 }
+function checkArrowsEndPosition() {
 
+
+
+
+
+
+
+}
+//displays red balls with numbers
 function displayCircleGrid() {
   textAlign(CENTER, CENTER);
   textSize(32);
@@ -310,5 +328,4 @@ function displayCircleGrid() {
     text("9",width / 2 + 200, height / 2 - 130 );
   }
 }
-
 
