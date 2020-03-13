@@ -17,6 +17,7 @@ let xClicked2, yClicked2;
 let arrowPressed;
 let v0;
 let v1;
+let one, two, three, four, five,six , seven, eight, nine;
 let base;
 
 
@@ -30,13 +31,14 @@ function setup() {
   let c = [3,1,1,1,2,1,1,1,1];
   let d = [2,3,1,0,3,1,2,2,0];
   let e = [2,0,1,2,4,3,1,1,0];
+  
   let possibleSolutions = [Tutorial,a,b,c,d,e]; 
   displayCircleGrid();
+  pickASolution();
 }
 
 
 function draw() {
-  pickASolution();
   
   selectBaseWithSpace();
   drawArrowsOnClick("black");
@@ -83,18 +85,87 @@ function pickASolution() {
   else {
     Solution = Tutorial;
   }
+  if (Solution === Tutorial) {
+    one = 1;
+    two = 1;
+    three = 1;
+    four = 1; 
+    five = 1 ;
+    six = 1;
+    seven = 1;
+    eight = 1;
+    nine = 1;
+  }
+  else if (Solution === a) {
+    one = 1;
+    two = 1;
+    three = 0;
+    four = 1; 
+    five = 2 ;
+    six = 1;
+    seven = 1;
+    eight = 1;
+    nine = 1;
+  }
+  else if (Solution === b) {
+    one = 1;
+    two = 2;
+    three = 1;
+    four = 2; 
+    five = 1 ;
+    six = 1;
+    seven = 1;
+    eight = 2;
+    nine = 1;
+  }
+  else if (Solution === c) {
+    one = 3;
+    two = 1;
+    three = 1;
+    four = 1; 
+    five = 2;
+    six = 1;
+    seven = 1;
+    eight = 1;
+    nine = 1;
+  }
+  else if (Solution === d) {
+    one = 2;
+    two = 3;
+    three = 1;
+    four = 0; 
+    five = 3 ;
+    six = 1;
+    seven = 2;
+    eight = 2;
+    nine = 0;
+  }
+  else if (Solution === e) {
+    one = 2;
+    two = 0;
+    three = 1;
+    four = 2; 
+    five = 4;
+    six = 3;
+    seven = 1;
+    eight = 1;
+    nine = 0;
+  }
 }
-function checkArrowsEndPosition() {
+//function checkArrowsEndPosition() {
 
 
 
-
-
-
-
+function IsPuzzleDone() {
+  if(one === 0 && two === 0 && three === 0 && four === 0 && five === 0 && six === 0 && seven === 0 && eight === 0 && nine === 0){
+    console.log("Complete");
+    pickASolution();
+  }
 }
 //displays red balls with numbers
 function displayCircleGrid() {
+  
+  
   textAlign(CENTER, CENTER);
   textSize(32);
   //1
